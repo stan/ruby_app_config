@@ -1,0 +1,15 @@
+defaults: &defaults
+  application: AwesomeApp
+  version: <%= 'version'.upcase %>
+  foo:
+    key: bar
+    deep_merge: still_here
+
+development:
+  <<: *defaults
+  foo:
+    key: development_bar
+    another_key: test
+
+production:
+  <<: *defaults
